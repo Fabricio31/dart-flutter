@@ -1,7 +1,10 @@
 void main(){
     //Instanciando ya no se usa NEW
     final Hero wolverione =  Hero('Logal', 'Regeneracion');
-    print(wolverione);
+    //Instancindo con metodo 3
+    final Hero wolverione =  Hero(name: 'Logal',power: 'Regeneracion');
+
+    print(wolverione.toString);
     print(wolverione.name);
     print(wolverione.power); 
 
@@ -19,14 +22,28 @@ class Hero {
         power = pPower;
     }
 
-    /*En dart-flutter*/ 
+    /*En dart-flutter Metodo 1*/ 
     Hero( String pName, String pPower ) 
     : name  = pName,
       power = pPower;
 
-    /*Otro metodo*/
+    /*Otro metodo Metodo 2*/
     Hero( this.name, this.power )
 
+    /*Otro metodo Metodo 3*/
+     Hero({
+        required this.name,
+        required this.power
+        //this.power = 'Sin Poder' si no enviamos el parametro aparece Sin Poder
+     });
+
+
+    //print(wolverione.toString); En ves de salir Instance of Hero aparece 
+    //Hola Mundo
+    @override
+    String toString(){
+        return '$name - $power';
+    }
 
 
 
