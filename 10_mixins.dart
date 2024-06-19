@@ -57,5 +57,21 @@ class PezVolador extends Pez with Nadador, Volador {
      // Es un pez que puede nadar y volar
 }
 
+void main(){
+
+    final flipper = Delfin();
+    flipper.nadar();
+
+    final batman = Murcielago();
+    batman.caminar();
+    batman.volar();
+
+    final namor = Murcielago();
+    namor.caminar();
+    namor.volar();
+    namor.nadar();    
+    
+}
+
 
 
