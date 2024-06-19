@@ -1,39 +1,23 @@
-mixin Animal {
+//Correcion Actual 
 
-}
+// Principal
+abstract class Animal {}
 
-mixin Mamifero extends Animal {
+//Extension de Clase Abstracta Animal
+abstract class Mamifero extends Animal {}
+abstract class Ave extends Animal {}
+abstract class Pez extends Animal {}
 
-}
-
-mixin Ave extends Animal {
-
-}
-
-mixin Pez extends Animal {
-
-}
-
-mixin Volador {
-    void volar() => print('estoy volando!');
-}
-
-mixin Caminante {
-    void caminar() => print('estoy caminando!');
-}
-
-
-mixin Nadador {
-    void nadar() => print('estoy nadando !');
-}
-
-
+//Mixin
+mixin class Volador { void volar() => print('estoy volando!'); }
+mixin class Caminante { void caminar() => print('estoy caminando!'); }
+mixin class Nadador { void nadar() => print('estoy nadando !'); }
 
 class Delfin extends Mamifero with Nadador {
     // Es un mamifero que puede nadar 
 }
 
-class Murcielago extends Mamifero with Volador, Caminante {
+class Murcielago extends Mamifero with Volador, Caminante, Nadador {
     // Es un mamifero que puede Volar y caminar 
 }
 
@@ -72,6 +56,3 @@ void main(){
     namor.nadar();    
     
 }
-
-
-
