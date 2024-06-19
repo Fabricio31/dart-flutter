@@ -27,3 +27,16 @@ mixin Nadador {
     void nadar() => print('estoy nadando !');
 }
 
+
+
+class Delfin extends Mamifero with Nadador {
+    // Es un mamifero que puede nadar 
+}
+
+class Murcielago extends Mamifero with Volador, Caminante {
+    // Es un mamifero que puede Volar y caminar 
+}
+
+class Gato extends Mamifero with Caminante {
+    // Es un mamifero que puede caminar 
+}
