@@ -40,3 +40,22 @@ class Murcielago extends Mamifero with Volador, Caminante {
 class Gato extends Mamifero with Caminante {
     // Es un mamifero que puede caminar 
 }
+
+/*Tarea*/
+
+class Paloma extends Ave with Volador, Caminante {
+    // Es un ave que puede volar y caminar XD
+}
+class Pato extends Ave with Volador, Caminante, Nadador {
+    // Es un ave que puede volar y caminar y nadar
+}
+
+class Tiburon extends Pez with Nadador {
+    // Es un pez que puede nadar
+}
+class PezVolador extends Pez with Nadador, Volador {
+     // Es un pez que puede nadar y volar
+}
+
+
+
