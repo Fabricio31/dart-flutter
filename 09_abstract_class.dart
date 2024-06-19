@@ -2,7 +2,13 @@ void main(){
 
     //Instanciando
     final windPlant = WindPlant ( initialEnergy: 100);
+
+    final nuclearPlant = NuclearPlant( energyLeft: 100);
+
     print('wind: ${chargePhone( windPlant )}');
+
+    print('nuclear: ${chargePhone( windPlant )}');
+
 }
 
 double chargePhone(EnergyPlant plant){
@@ -22,7 +28,7 @@ abstract class EnergyPlant {
 
     //Atributos
     double energyLeft;
-    PlantType type; // nuclear - wind - water linea(7)
+    final PlantType type; // nuclear - wind - water linea(7)
 
     //Constructor de los Atributos
     EnergyPlant
@@ -54,4 +60,23 @@ class WindPlant extends EnergyPlant {
 
 }
 /*Clase Fin Extends o implements*/
+
+
+/*Nueva Clase implements*/
+class NuclearPlant implements EnergyPlant{
+
+    @override
+    double energyLeft;
+
+    @override
+    final PlantType type = PlantType.nuclear;
+
+    NuclearPlant({ required this.energyLeft});
+
+    @override
+    void consumeEnergy(double amount){
+        energyLeft -= (amount * 0.5);
+    }
+
+}
 
